@@ -56,7 +56,7 @@ section:nth-child(even) {
   margin-top: 1rem;
   padding: 0.5rem;
   padding-left: 1rem;
-  border: var(--border);
+  border: 0.2rem solid red;
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   color: white;
@@ -74,7 +74,7 @@ section:nth-child(even) {
 }
 
 .btn:hover {
-  background: rgba(83, 81, 77, 0.2);
+  background: rgba(168, 166, 161, 0.2);
   color: black;
   border-radius: 50px;
 }
