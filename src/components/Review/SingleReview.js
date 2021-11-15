@@ -12,7 +12,7 @@ const SingleReview = (props) => {
 
   return (
     <div className="col-lg-4">
-      <div className="card mb-3  p-3">
+      <div className="card mb-3 justify-content-center  p-3">
         <div className="d-flex justify-content-between my-3">
           <h4 className="my-3">{name}</h4>
         </div>

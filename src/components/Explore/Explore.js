@@ -10,7 +10,12 @@ const Explore = () => {
   });
   return (
     <div style={{ marginTop: 20 }}>
-      <h2 className="text-center bg-warning">Products</h2>
+      <h2
+        style={{ color: "var(--green)", fontSize: "5rem" }}
+        className="text-center"
+      >
+        Products
+      </h2>
       <div className="row row-cols-md-3 g-3">
         {products.map((p) => (
           <Product key={p._id} product={p}></Product>
