@@ -41,7 +41,7 @@ const Footer = () => {
             </i>{" "}
             home{" "}
           </Link>
-          <Link to="/services">
+          <Link to="/home">
             {" "}
             <i className="fas fa-chevron-right">
               {" "}
@@ -49,7 +49,7 @@ const Footer = () => {
             </i>{" "}
             services{" "}
           </Link>
-          <Link to="/about">
+          <Link to="/home">
             {" "}
             <i className="fas fa-chevron-right">
               {" "}
@@ -57,14 +57,14 @@ const Footer = () => {
             </i>{" "}
             about{" "}
           </Link>
-          <Link to="/doctors">
+          <Link to="/home">
             {" "}
             <i className="fas fa-chevron-right">
               <FcManager></FcManager>
             </i>{" "}
             support{" "}
           </Link>
-          <Link to="/book">
+          <Link to="/home">
             {" "}
             <i className="fas fa-chevron-right">
               {" "}
@@ -76,7 +76,7 @@ const Footer = () => {
 
         <div className="box">
           <h3>our services</h3>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fas fa-chevron-right">
               {" "}
@@ -84,7 +84,7 @@ const Footer = () => {
             </i>{" "}
             care{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fas fa-chevron-right">
               {" "}
@@ -92,7 +92,7 @@ const Footer = () => {
             </i>{" "}
             replacement{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fas fa-chevron-right">
               {" "}
@@ -100,7 +100,7 @@ const Footer = () => {
             </i>{" "}
             design{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fas fa-chevron-right">
               {" "}
@@ -108,7 +108,7 @@ const Footer = () => {
             </i>{" "}
             art{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fas fa-chevron-right">
               {" "}
@@ -120,7 +120,7 @@ const Footer = () => {
 
         <div className="box">
           <h3>contact info</h3>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fas fa-phone">
               {" "}
@@ -128,14 +128,14 @@ const Footer = () => {
             </i>{" "}
             +123-456-7890{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fas fa-phone">
               <FcCellPhone></FcCellPhone>{" "}
             </i>{" "}
             +111-222-3333{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fas fa-envelope">
               {" "}
@@ -143,7 +143,7 @@ const Footer = () => {
             </i>{" "}
             f.mart@gmail.com{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fas fa-envelope">
               {" "}
@@ -151,7 +151,7 @@ const Footer = () => {
             </i>{" "}
             v.mail@gmail.com{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fas fa-map-marker-alt">
               {" "}
@@ -163,14 +163,14 @@ const Footer = () => {
 
         <div className="box">
           <h3>follow us</h3>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fab fa-facebook-f">
               <FaFacebook></FaFacebook>
             </i>{" "}
             facebook{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fab fa-twitter">
               <FaTwitter></FaTwitter>
@@ -178,7 +178,7 @@ const Footer = () => {
             twitter{" "}
           </Link>
 
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fab fa-instagram">
               {" "}
@@ -186,7 +186,7 @@ const Footer = () => {
             </i>{" "}
             instagram{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fab fa-linkedin">
               {" "}
@@ -194,7 +194,7 @@ const Footer = () => {
             </i>{" "}
             linkedin{" "}
           </Link>
-          <Link to="#">
+          <Link to="/home">
             {" "}
             <i className="fab fa-pinterest">
               <FaPinterest></FaPinterest>{" "}

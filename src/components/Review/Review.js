@@ -20,7 +20,7 @@ const Review = () => {
   };
   return (
     <div className="add-service" style={{ marginTop: 50 }}>
-      <h2 className="text-center">Please leave your valuable feedback here</h2>
+      <h2 className="text-center">Please leave your comment here</h2>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
@@ -30,7 +30,7 @@ const Review = () => {
           required
         />
         <input
-          className="form-control mb-3"
+          className="form-control w-75 mb-3"
           {...register("name")}
           // value={user?.email}
           required
