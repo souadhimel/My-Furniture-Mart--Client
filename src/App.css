@@ -4,7 +4,7 @@
   --green: #16a085;
   --black: #444;
   --light-color: #777;
-  --box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  --box-shadow: 0.5rem 0.5rem 0 rgba(51, 150, 130, 0.2);
   --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
   --border: 0.2rem solid var(--green);
 }
@@ -59,10 +59,10 @@ section:nth-child(even) {
   border: var(--border);
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
-  color: var(--green);
+  color: white;
   cursor: pointer;
   font-size: 1.7rem;
-  background: #fff;
+  background: rgb(152, 167, 131);
 }
 
 .btn span {
@@ -74,13 +74,14 @@ section:nth-child(even) {
 }
 
 .btn:hover {
-  background: var(--green);
-  color: #fff;
+  background: rgba(83, 81, 77, 0.2);
+  color: black;
+  border-radius: 50px;
 }
 
 .btn:hover span {
   color: var(--green);
-  background: #fff;
+  background: rgb(131, 153, 98);
   margin-left: 1rem;
 }
 
