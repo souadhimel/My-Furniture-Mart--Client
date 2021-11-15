@@ -38,7 +38,7 @@ const Dashboard = () => {
         <div className="row">
           <div className="col-md-3 ">
             <div className="dashboard">
-              <h5 style={{ marginTop: 50 }} className="text-center">
+              <h5 style={{ margin: 50 }} className="text-center">
                 Dashboard
               </h5>
               {!admin && (

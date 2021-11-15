@@ -40,13 +40,17 @@ const Update = () => {
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="form-control mb-3"
+          className="form-control text-center mb-3"
           defaultValue={order?.status}
           {...register("status")}
           required
         />
 
-        <input className="btn btn-success w-25" type="submit" value="Update" />
+        <input
+          className="btn btn-success justify-content-center w-25"
+          type="submit"
+          value="Update"
+        />
       </form>
     </div>
   );
