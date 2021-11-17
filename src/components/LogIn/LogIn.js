@@ -20,7 +20,7 @@ const LogIn = () => {
   const history = useHistory();
   const location = useLocation();
 
-  const url = location?.state?.from || "/home";
+  const url = location?.state?.from || "/dashboard";
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
