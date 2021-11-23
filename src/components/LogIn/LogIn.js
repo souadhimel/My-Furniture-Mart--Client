@@ -50,14 +50,14 @@ const LogIn = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 type="email"
-                className="form-control bg-dark text-white mb-3"
+                className="form-control bg-white text-white mb-3"
                 {...register("email")}
                 placeholder="Your Email"
                 required
               />
               <input
                 type="password"
-                className="form-control bg-dark text-white mb-3"
+                className="form-control bg-white text-white mb-3"
                 {...register("password")}
                 placeholder="Your password"
                 required
