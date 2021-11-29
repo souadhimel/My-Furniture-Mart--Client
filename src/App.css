@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 :root {
-  --green: #16a085;
+  --green: #31dbb9;
   --black: #444;
   --light-color: #777;
-  --box-shadow: 0.5rem 0.5rem 0 rgba(51, 150, 130, 0.2);
-  --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+  --box-shadow: 0.5rem 0.5rem 0 rgba(145, 126, 160, 0.2);
+  /* --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2); */
   --border: 0.2rem solid var(--green);
 }
 
@@ -16,7 +16,7 @@
   box-sizing: border-box;
   outline: none;
   border: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all 0.2s ease-out;
   text-decoration: none;
 }
@@ -553,7 +553,7 @@ section:nth-child(even) {
 
 .footer .box-container .box a i {
   padding-right: 0.5rem;
-  color: var(--green);
+  /* color: var(--green); */
 }
 
 .footer .box-container .box a:hover i {

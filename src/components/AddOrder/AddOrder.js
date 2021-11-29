@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import "./AddOrder.css";
 import { useForm } from "react-hook-form";
 import useFirebase from "../../Hooks/useFirebase";
+import Swal from "sweetalert2";
 
 const AddOrder = () => {
   const { id } = useParams();
@@ -12,7 +13,6 @@ const AddOrder = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   useEffect(() => {
@@ -31,16 +31,23 @@ const AddOrder = () => {
       .then((res) => res.json())
       .then((result) => {
         setProduct(result);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Your order has been successfully submitted!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
         console.log(result);
       });
   };
 
   return (
-    <div>
+    <>
       <div className="AddOrder-container">
         <div className="row-container">
           <div className="col-md-6 single-item">
-            <img className="w-50" src={product?.img} alt="" />
+            <img className="w-100" src={product?.img} alt="" />
             <h2>Name:{product?.name}</h2>
             <p>Description:{product?.description}</p>
             <h1>Price:{product?.price}</h1>
@@ -93,7 +100,7 @@ const AddOrder = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -3,6 +3,7 @@ import "./Review.css";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 const Review = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -13,7 +14,13 @@ const Review = () => {
       .post("https://desolate-sands-22384.herokuapp.com/rating", data)
       .then((res) => {
         if (res.data.insertedId) {
-          alert("added successfully");
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Congratz!Your comment has been added",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           reset();
         }
       });
@@ -26,13 +33,13 @@ const Review = () => {
         <input
           className="form-control mb-3"
           {...register("email")}
-          value={user?.displayName}
+          value={user?.email}
           required
         />
         <input
-          className="form-control w-75 mb-3"
+          className="form-control mb-3"
           {...register("name")}
-          // value={user?.email}
+          value={user?.displayName}
           required
         />
         <input
@@ -42,7 +49,7 @@ const Review = () => {
           placeholder="rating(0-5)"
           required
         />
-        <textarea
+        <input
           rows="4"
           className="form-control mb-3"
           {...register("comment")}

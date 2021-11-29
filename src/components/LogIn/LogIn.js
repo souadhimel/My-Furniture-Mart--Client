@@ -1,10 +1,11 @@
 import React from "react";
+import { FcGoogle } from "react-icons/fc";
 import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Hooks/useAuth";
 import "./LogIn.css";
-import useFirebase from "../../Hooks/useFirebase";
+import Swal from "sweetalert2";
 
 const LogIn = () => {
   const {
@@ -17,17 +18,26 @@ const LogIn = () => {
   } = useAuth();
 
   const { register, handleSubmit, reset } = useForm();
+
+  //Redirect
   const history = useHistory();
   const location = useLocation();
+  const redirect_url = location?.state?.from || "/";
 
-  const url = location?.state?.from || "/home";
-
+  // Google login
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then((res) => {
         setIsLoading(true);
         setUser(res.user);
-        history.push(url);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "You have logged in successfully!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        history.push(redirect_url);
       })
       .catch((err) => console.log(err))
       .finally(() => {
@@ -35,34 +45,64 @@ const LogIn = () => {
       });
   };
 
+  // Email & password submission
   const onSubmit = (data) => {
     console.log(data);
-    handleEmailLogin(data.email, data.password);
+    handleEmailLogin(data.email, data.password, location, history);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "You have logged in successfully!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
 
     reset();
   };
+
   return (
     <>
-      <div className="login py-5 w-100 ">
+      <div className="login text-center py-5 w-100 ">
         <div className=" p-5">
-          <h3 className="text-center text-red pb-3">Login</h3>
+          <div>
+            <img
+              style={{ width: 100 }}
+              src="https://assignment-012.web.app/static/media/avater.abc26752.png"
+              alt=""
+            />
+          </div>
+          <h3 className=" text-dark pb-3">Please login to your account</h3>
           <div className="w-50 mx-auto">
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 type="email"
-                className="form-control bg-white text-white mb-3"
+                style={{
+                  margin: "5px",
+                  border: "2px solid red",
+                  padding: "10px",
+                  borderRadius: "5px",
+                }}
+                className="form-control  text-black mb-3"
                 {...register("email")}
-                placeholder="Your Email"
+                placeholder="Your email address"
                 required
               />
+              <br /> <br />
               <input
                 type="password"
-                className="form-control bg-white text-white mb-3"
+                style={{
+                  margin: "5px",
+                  border: "2px solid red",
+                  padding: "10px",
+                  borderRadius: "5px",
+                }}
+                className="form-control  text-black mb-3"
                 {...register("password")}
                 placeholder="Your password"
                 required
               />
-              <button className="btn btn-success w-100 fw-bold" type="submit">
+              <br /> <br />
+              <button className="btn btn-warning w-100 fw-bold" type="submit">
                 Login
               </button>
             </form>
@@ -74,9 +114,9 @@ const LogIn = () => {
             {!user?.displayName ? (
               <button
                 onClick={handleGoogleLogin}
-                className="btn btn-success text-white"
+                className="btn btn-white google border-rounded font-bold"
               >
-                Google LogIn
+                <FcGoogle></FcGoogle>
               </button>
             ) : (
               <button
@@ -90,8 +130,9 @@ const LogIn = () => {
             <Link
               style={{
                 textDecoration: "none",
-                color: "#000",
+                color: "black",
                 marginTop: "10px",
+                fontSize: "15px",
               }}
               to="/register"
             >

@@ -1,4 +1,9 @@
 .login {
-  background-color: rgb(151, 102, 112);
-  margin-top: 30px;
+  background-color: rgb(119, 160, 236);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.google {
+  background-color: rgb(201, 122, 122);
 }

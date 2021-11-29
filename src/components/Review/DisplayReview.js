@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import SingleReview from "./SingleReview";
+import { Row } from "react-bootstrap";
+import "./Review.css";
 
 const DisplayReview = () => {
   const [reviews, setReviews] = useState([]);
@@ -14,7 +16,7 @@ const DisplayReview = () => {
       <div>
         <h2
           className="text-center mt-8"
-          style={{ color: "var(--green)", fontSize: "5rem" }}
+          style={{ color: "var(--green)", fontSize: "5rem", marginTop: "50px" }}
         >
           Customer Rating
         </h2>
@@ -22,11 +24,11 @@ const DisplayReview = () => {
           <Spinner animation="border" />
         ) : (
           <div className="container">
-            <div className="row">
+            <Row xs={1} md={3} className="g-4">
               {reviews.map((review) => (
                 <SingleReview key={review._id} review={review}></SingleReview>
               ))}
-            </div>
+            </Row>
           </div>
         )}
       </div>

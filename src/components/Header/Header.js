@@ -9,16 +9,11 @@ const Header = () => {
   const { user, logOut } = useAuth();
   return (
     <>
-      <Navbar
-        className="navbar"
-        variant="dark"
-        sticky="top"
-        collapseOnSelect
-        expand="lg"
-      >
+      <Navbar className="navbar" variant="dark" sticky="top" collapseOnSelect>
         <Container>
           <Navbar.Brand className="text-black" href="/home">
-            <FcRadarPlot></FcRadarPlot> Furniture Mart <span>.</span>
+            <FcRadarPlot style={{ fontSize: 30 }}></FcRadarPlot> Furniture Mart{" "}
+            <span>.</span>
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">

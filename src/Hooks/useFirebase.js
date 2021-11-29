@@ -19,8 +19,11 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [admin, setAdmin] = useState(false);
   const auth = getAuth();
+
+  // Provider
   const googleProvider = new GoogleAuthProvider();
 
+  // Observation user
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       console.log(user);
@@ -34,13 +37,16 @@ const useFirebase = () => {
     return () => unsubscribe();
   }, [auth]);
 
+  // Registration
   const handleRegister = (email, password, name) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         const newUser = { email, displayName: name };
-
         setUser(newUser);
+        // save user to database
+        // saveUser(email,name)
+
         updateProfile(auth.currentUser, {
           displayName: name,
         })
@@ -53,6 +59,8 @@ const useFirebase = () => {
         // ..
       });
   };
+
+  // Email & password login
   const handleEmailLogin = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -68,16 +76,19 @@ const useFirebase = () => {
       });
   };
 
+  // Google login
   const signInWithGoogle = () => {
     return signInWithPopup(auth, googleProvider);
   };
 
+  // Admin set up with email
   useEffect(() => {
     fetch(`https://desolate-sands-22384.herokuapp.com/users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data?.admin));
   }, [user?.email]);
 
+  // Log out
   const logOut = () => {
     signOut(auth)
       .then(() => {
@@ -87,6 +98,12 @@ const useFirebase = () => {
         // An error happened.
       });
   };
+
+  // // save user in database
+  // const saveUser =(email,displayName)={
+  //   // const user={ email,}
+
+  // }
 
   return {
     user,

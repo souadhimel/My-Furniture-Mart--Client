@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import "./ManageOrders.css";
+import Swal from "sweetalert2";
 
 const ManageOrder = () => {
   const [orders, setOrders] = useState([]);
@@ -10,8 +10,10 @@ const ManageOrder = () => {
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [orders]);
+
+  // Delete in UI
   const handleDelete = (id) => {
-    const proceed = window.confirm("Are you sure you want to delete");
+    const proceed = window.confirm("Are you sure you want to delete?");
     if (proceed) {
       const url = `https://desolate-sands-22384.herokuapp.com/orders/${id}`;
       console.log(url);
@@ -21,7 +23,19 @@ const ManageOrder = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
-            alert("Deleted Successfully");
+            Swal.fire({
+              title: "Are you sure?",
+              text: "You won't be able to revert this!",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Yes, delete it!",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              }
+            });
             const remainingProducts = orders.filter(
               (order) => order?._id !== id
             );

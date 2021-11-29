@@ -1,9 +1,7 @@
 import React from "react";
-
 import Gallery from "../Gallery/Gallery";
 import Products from "../Products/Products";
 import DisplayReview from "../Review/DisplayReview";
-
 import Speciality from "../Speciality/Speciality";
 import "./Home.css";
 

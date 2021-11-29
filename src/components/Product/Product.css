@@ -1,6 +1,15 @@
 .card-body {
-  background-color: rgb(140, 175, 177);
+  background-color: rgb(186, 200, 201);
+  justify-content: center;
+  text-align: center;
+  height: 130px;
+  overflow: hidden;
 }
 .service-card {
-  margin: px;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+.image {
+  height: 250px;
+  overflow: hidden;
 }

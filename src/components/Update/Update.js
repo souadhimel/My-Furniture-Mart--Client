@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
+import Swal from "sweetalert2";
 
 const Update = () => {
   const [order, setOrder] = useState({});
@@ -28,7 +29,13 @@ const Update = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.modifiedCount) {
-          alert("Modified successfully");
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Status updated successfully!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           setIsUpdated(true);
           reset();
         } else {
@@ -37,20 +44,16 @@ const Update = () => {
       });
   };
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="form-control text-center mb-3"
+          className="form-control m-3 w-50 justify-content-center align-items-center"
           defaultValue={order?.status}
           {...register("status")}
           required
         />
 
-        <input
-          className="btn btn-success justify-content-center w-25"
-          type="submit"
-          value="Update"
-        />
+        <input className="btn btn-success  w-25" type="submit" value="Update" />
       </form>
     </div>
   );

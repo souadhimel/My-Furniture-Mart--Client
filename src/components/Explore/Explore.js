@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Row } from "react-bootstrap";
 import Product from "../Product/Product";
 
 const Explore = () => {
@@ -16,10 +17,12 @@ const Explore = () => {
       >
         Products
       </h2>
-      <div className="row row-cols-md-3 g-3">
-        {products.map((p) => (
-          <Product key={p._id} product={p}></Product>
-        ))}
+      <div className="container">
+        <Row xs={1} md={3} className="g-4 h-100">
+          {products.map((p) => (
+            <Product key={p._id} product={p}></Product>
+          ))}
+        </Row>
       </div>
     </div>
   );

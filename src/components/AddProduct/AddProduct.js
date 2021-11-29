@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import "./AddProduct.css";
-
+import Swal from "sweetalert2";
 const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
@@ -11,7 +11,13 @@ const AddProduct = () => {
       .post("https://desolate-sands-22384.herokuapp.com/services", data)
       .then((res) => {
         if (res.data.insertedId) {
-          alert("added successfully");
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Added successfully!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           reset();
         }
       });

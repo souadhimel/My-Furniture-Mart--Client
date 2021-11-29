@@ -2,6 +2,7 @@ import React from "react";
 import Product from "../Product/Product";
 import { useEffect, useState } from "react";
 import "./Products.css";
+import { Row } from "react-bootstrap";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -18,10 +19,12 @@ const Products = () => {
       >
         Products
       </h2>
-      <div className="row row-cols-md-3 g-3">
-        {products.map((p) => (
-          <Product key={p._id} product={p}></Product>
-        ))}
+      <div>
+        <Row xs={1} md={2} className=" m-5 p-3 g-5 ">
+          {products.map((p) => (
+            <Product key={p._id} product={p}></Product>
+          ))}
+        </Row>
       </div>
     </div>
   );

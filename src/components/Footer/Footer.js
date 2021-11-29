@@ -33,17 +33,17 @@ const Footer = () => {
     <section className="footer">
       <div className="box-container">
         <div className="box">
-          <h3>quick links</h3>
+          <h3>Quick links</h3>
           <Link to="/home">
             {" "}
-            <i className="fas fa-chevron-right">
+            <i>
               <FcHome></FcHome>
             </i>{" "}
             home{" "}
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-chevron-right">
+            <i>
               {" "}
               <FcServices></FcServices>{" "}
             </i>{" "}
@@ -51,7 +51,7 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-chevron-right">
+            <i>
               {" "}
               <FcAbout></FcAbout>{" "}
             </i>{" "}
@@ -59,14 +59,14 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-chevron-right">
+            <i>
               <FcManager></FcManager>
             </i>{" "}
             support{" "}
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-chevron-right">
+            <i>
               {" "}
               <FcCheckmark></FcCheckmark>{" "}
             </i>{" "}
@@ -75,10 +75,10 @@ const Footer = () => {
         </div>
 
         <div className="box">
-          <h3>our services</h3>
+          <h3>Our services</h3>
           <Link to="/home">
             {" "}
-            <i className="fas fa-chevron-right">
+            <i>
               {" "}
               <BiBody></BiBody>{" "}
             </i>{" "}
@@ -86,7 +86,7 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-chevron-right">
+            <i>
               {" "}
               <RiPsychotherapyFill></RiPsychotherapyFill>{" "}
             </i>{" "}
@@ -94,7 +94,7 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-chevron-right">
+            <i>
               {" "}
               <FaHeartbeat></FaHeartbeat>{" "}
             </i>{" "}
@@ -102,7 +102,7 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-chevron-right">
+            <i>
               {" "}
               <FaDiagnoses></FaDiagnoses>{" "}
             </i>{" "}
@@ -110,7 +110,7 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-chevron-right">
+            <i>
               {" "}
               <FaAmbulance></FaAmbulance>{" "}
             </i>{" "}
@@ -119,10 +119,10 @@ const Footer = () => {
         </div>
 
         <div className="box">
-          <h3>contact info</h3>
+          <h3>Contact info</h3>
           <Link to="/home">
             {" "}
-            <i className="fas fa-phone">
+            <i>
               {" "}
               <FcCallback></FcCallback>{" "}
             </i>{" "}
@@ -130,14 +130,14 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-phone">
+            <i>
               <FcCellPhone></FcCellPhone>{" "}
             </i>{" "}
             +111-222-3333{" "}
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-envelope">
+            <i>
               {" "}
               <FaEnvelope></FaEnvelope>{" "}
             </i>{" "}
@@ -145,7 +145,7 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-envelope">
+            <i>
               {" "}
               <FcVoicemail></FcVoicemail>
             </i>{" "}
@@ -153,7 +153,7 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fas fa-map-marker-alt">
+            <i>
               {" "}
               <FcGlobe></FcGlobe>{" "}
             </i>{" "}
@@ -162,17 +162,17 @@ const Footer = () => {
         </div>
 
         <div className="box">
-          <h3>follow us</h3>
+          <h3>Follow us</h3>
           <Link to="/home">
             {" "}
-            <i className="fab fa-facebook-f">
+            <i>
               <FaFacebook></FaFacebook>
             </i>{" "}
             facebook{" "}
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fab fa-twitter">
+            <i>
               <FaTwitter></FaTwitter>
             </i>{" "}
             twitter{" "}
@@ -180,7 +180,7 @@ const Footer = () => {
 
           <Link to="/home">
             {" "}
-            <i className="fab fa-instagram">
+            <i>
               {" "}
               <FaInstagram></FaInstagram>{" "}
             </i>{" "}
@@ -188,7 +188,7 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fab fa-linkedin">
+            <i>
               {" "}
               <FaLinkedin></FaLinkedin>{" "}
             </i>{" "}
@@ -196,7 +196,7 @@ const Footer = () => {
           </Link>
           <Link to="/home">
             {" "}
-            <i className="fab fa-pinterest">
+            <i>
               <FaPinterest></FaPinterest>{" "}
             </i>{" "}
             pinterest{" "}

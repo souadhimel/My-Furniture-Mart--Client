@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Route, Redirect } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";

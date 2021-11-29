@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import useFirebase from "../../Hooks/useFirebase";
+import Swal from "sweetalert2";
 
 const MyOrder = () => {
   const { user } = useFirebase();
@@ -12,7 +13,7 @@ const MyOrder = () => {
   }, [user?.email]);
 
   const orderCancel = (id) => {
-    const proceed = window.confirm("Are you sure you want to delete");
+    const proceed = window.confirm("Are you sure you want to delete?");
     if (proceed) {
       const url = `https://desolate-sands-22384.herokuapp.com/orders/${id}`;
       fetch(url, {
@@ -21,7 +22,19 @@ const MyOrder = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
-            alert("Deleted Successfully");
+            Swal.fire({
+              title: "Are you sure?",
+              text: "You won't be able to revert this!",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Yes, delete it!",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              }
+            });
             const remainingProducts = myOrders?.filter(
               (order) => order?._id !== id
             );
@@ -43,8 +56,8 @@ const MyOrder = () => {
               <thead>
                 <tr>
                   <th>Product Id</th>
-                  <th>User Name</th>
-                  <th>Price</th>
+                  {/* <th>User Name</th>
+                  <th>Price</th> */}
                   <th>Status</th>
                   <th>Actions</th>
                 </tr>
@@ -53,8 +66,8 @@ const MyOrder = () => {
                 {myOrders.map((order) => (
                   <tr key={order._id}>
                     <td>{order?._id}</td>
-                    <td>{order?.name}</td>
-                    <td>{order?.price}</td>
+                    {/* <td>{order?.displayName}</td>
+                    <td>{order?.price}</td> */}
                     <td>{order?.status}</td>
                     <td>
                       <button

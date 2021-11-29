@@ -36,28 +36,28 @@ const Speciality = () => {
 
       <div className="box-container text-center">
         <div className="box">
-          <i className="fas fa-hotel">
+          <i>
             <FcEngineering></FcEngineering>
           </i>
           <h3>exclusive design</h3>
           <p>Choose from our huge collections</p>
         </div>
         <div className="box">
-          <i className="fas fa-utensils">
+          <i>
             <FcOnlineSupport></FcOnlineSupport>
           </i>
           <h3>Customer Care</h3>
           <p>We are 24/7 open just to improve your lifestyle</p>
         </div>
         <div className="box">
-          <i className="fas fa-bullhorn">
+          <i>
             <FcBrokenLink></FcBrokenLink>
           </i>
           <h3>safety guide</h3>
           <p>Safety is the state of being "safe"</p>
         </div>
         <div className="box">
-          <i className="fas fa-globe-asia">
+          <i>
             {" "}
             <FcProcess></FcProcess>
           </i>
@@ -65,28 +65,28 @@ const Speciality = () => {
           <p>we provide eco friendly and bio-degradable products</p>
         </div>
         <div className="box">
-          <i className="fas fa-plane">
+          <i>
             <FcInTransit></FcInTransit>
           </i>
           <h3>fastest transit</h3>
           <p>we will reach your product in the shortest time</p>
         </div>
         <div className="box">
-          <i className="fas fa-hiking">
+          <i>
             <FcBullish></FcBullish>
           </i>
           <h3>fast growing</h3>
           <p>we are fast grown up in Bangladesh</p>
         </div>
         <div className="box">
-          <i className="fas fa-hiking">
+          <i>
             <FcCurrencyExchange></FcCurrencyExchange>
           </i>
           <h3>easy payment</h3>
           <p> Enjoy 0% interest for installment payment. * Conditions Apply</p>
         </div>
         <div className="box">
-          <i className="fas fa-hiking">
+          <i>
             <FcBiotech></FcBiotech>
           </i>
           <h3>warranty policy</h3>
@@ -96,7 +96,7 @@ const Speciality = () => {
           </p>
         </div>
         <div className="box">
-          <i className="fas fa-hiking">
+          <i>
             <FcBinoculars></FcBinoculars>
           </i>
           <h3>Assembling</h3>
@@ -105,21 +105,21 @@ const Speciality = () => {
           </p>
         </div>
         <div className="box">
-          <i className="fas fa-hiking">
+          <i>
             <FcCollect></FcCollect>
           </i>
           <h3>shifting</h3>
           <p>We provide you dismantling and re-assembling service.</p>
         </div>
         <div className="box">
-          <i className="fas fa-hiking">
+          <i>
             <FcTreeStructure></FcTreeStructure>
           </i>
           <h3>Knockdown</h3>
           <p>You can easily dismantle your furniture.</p>
         </div>
         <div className="box">
-          <i className="fas fa-hiking">
+          <i>
             <FcOrgUnit></FcOrgUnit>
           </i>
           <h3>research</h3>
